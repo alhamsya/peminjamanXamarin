@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App3.TambahPeminjamanPage" Title="Tambah Peminjaman">
+
+    <ContentPage.Content>
+        <Grid x:Name="gvPeminjaman">
+            <ScrollView VerticalOptions="FillAndExpand">
+                <StackLayout HeightRequest="1000">
+                    <Label Text="Nama Peminjam :"/>
+                    <Entry x:Name="txtNamaPeminjaman" Text="{Binding NamaPeminjaman}" Placeholder="masukan nama anda" Grid.Row="0" Grid.Column="1" />
+
+                    <Label Text="NIM Peminjam :"/>
+                    <Entry x:Name="txtNimPeminjaman" Text="{Binding NimPeminjaman}" Placeholder="masukan nim anda" Keyboard="Numeric" Grid.Row="1" Grid.Column="1" />
+
+                    <Label Text="Ruang Peminjaman :"/>
+                    <Entry x:Name="txtRuangPeminjaman" Text="{Binding RuangPeminjaman}" Placeholder="masukan ruang peminjaman"  Grid.Row="2" Grid.Column="1" />
+
+                    <Label Text="Waktu Peminjaman :"/>
+                    <Entry x:Name="txtWaktuPeminjaman" Text="{Binding WaktuPeminjaman}" Placeholder="masukan waktu peminjaman" Keyboard="Numeric" Grid.Row="3" Grid.Column="1" />
+
+                    <Label Text="Waktu Selesai :"/>
+                    <Entry x:Name="txtWaktuSelesai" Text="{Binding WaktuSelesai}" Placeholder="masukan waktu selesai" Keyboard="Numeric" Grid.Row="4" Grid.Column="1" />
+
+                    <Label Text="Tanggal Peminjaman :"/>
+                    <Entry x:Name="txtTanggalPeminjaman" Text="{Binding TanggalPeminjaman}" Placeholder="masukan tanggal peminjaman" Grid.Row="5" Grid.Column="1" />
+
+                    <StackLayout HorizontalOptions="StartAndExpand" Orientation="Horizontal">
+                        <Button x:Name="btnSave" HorizontalOptions="EndAndExpand" WidthRequest="150" Text="Save" Clicked="BtnSave_OnClicked" />
+                        <Button x:Name="btnDelete" HorizontalOptions="StartAndExpand" WidthRequest="150" Text="Delete" Clicked="BtnDelete_OnClicked" />
+                    </StackLayout>
+                    
+                </StackLayout>
+            </ScrollView>
+        </Grid>
+    </ContentPage.Content>
+
+</ContentPage>
